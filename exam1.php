@@ -6,9 +6,6 @@
 </head>
 <body>
 	<?php
-$a = "";
-$b = "";
-$c = "";
 if (isset ( $_POST ['a'] )) {
     $a = $_POST ['a'];
 }
