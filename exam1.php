@@ -74,9 +74,8 @@
     <br>
     <?php
 // Hàm giải phương trình
-    if (is_numeric ( $GLOBALS ['a'] ) && is_numeric ( $GLOBALS ['b'] ) 
-        && is_numeric ( $GLOBALS ['b'] )) {
-        giaiPTB2 ( $GLOBALS ['a'], $GLOBALS ['b'], $GLOBALS ['c'] );
+     if (is_numeric ($a) && is_numeric ($b)  && is_numeric ($c)) {
+        giaiPTB2 ( $a, $b, $c);
 } else {
     echo ("Giá trị input không hợp lệ!");
 }
