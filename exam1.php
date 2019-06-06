@@ -15,7 +15,41 @@
     if (isset ( $_POST ['c'] )) {
         $c = $_POST ['c'];
     }
-
+	// Validate
+    if ($a == '')
+    {
+        if ($b == '' && $c == '') {
+            echo "Vui lòng nhập vào dữ liệu";
+            die();
+        }
+        elseif ($b != '' && $c != '')
+        {
+            echo "Vui lòng nhập vào a";
+            die();
+        }
+        elseif ($b == '' && $c != '') {
+            echo "Vui lòng nhập vào a và b";
+            die();
+        }
+        elseif ($b != '' && $c == '') {
+            echo "Vui lòng nhập vào a và c";
+            die();
+        }
+    }
+    else {
+        if ($b == '' && $c != '') {
+            echo "Vui lòng nhập vào b";
+            die();
+        }
+        elseif ($b == '' && $c == ''){
+            echo "Vui lòng nhập vào b và c";
+            die();
+        }
+        elseif ($b != '' && $c == '') {
+            echo "Vui lòng nhập vào c";
+            die();
+        }
+    }
     function giaiPTB2($a, $b, $c) {
         $result = '';
     // kiểm tra biến đầu vào
@@ -75,41 +109,6 @@
     </form>
     <br>
     <?php
-// Validate
-    if ($a == '')
-    {
-        if ($b == '' && $c == '') {
-            echo "Vui lòng nhập vào dữ liệu";
-            die();
-        }
-        elseif ($b != '' && $c != '')
-        {
-            echo "Vui lòng nhập vào a";
-            die();
-        }
-        elseif ($b == '' && $c != '') {
-            echo "Vui lòng nhập vào a và b";
-            die();
-        }
-        elseif ($b != '' && $c == '') {
-            echo "Vui lòng nhập vào a và c";
-            die();
-        }
-    }
-    else {
-        if ($b == '' && $c != '') {
-            echo "Vui lòng nhập vào b";
-            die();
-        }
-        elseif ($b == '' && $c == ''){
-            echo "Vui lòng nhập vào b và c";
-            die();
-        }
-        elseif ($b != '' && $c == '') {
-            echo "Vui lòng nhập vào c";
-            die();
-        }
-    }
     if (is_numeric ($a) && is_numeric ($b) 
         && is_numeric ($c)) {
         echo giaiPTB2 ( $a, $b, $c);
